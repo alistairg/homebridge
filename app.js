@@ -178,12 +178,12 @@ function createUsername(str) {
     var hash = crypto.createHash('md5').update(str).digest("hex").toUpperCase();
 
     // Turn it into a MAC-address-looking "username" for HomeKit
-    return hash[0] + hash[1] + ":" +
-           hash[2] + hash[3] + ":" +
-           hash[4] + hash[5] + ":" +
-           hash[6] + hash[7] + ":" +
-           hash[8] + hash[9] + ":" +
-           hash[10] + hash[11];
+    return hash[0] + hash[2] + ":" +
+           hash[4] + hash[6] + ":" +
+           hash[8] + hash[10] + ":" +
+           hash[12] + hash[14] + ":" +
+           hash[16] + hash[18] + ":" +
+           hash[20] + hash[20];
 }
 
 startup();
