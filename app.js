@@ -122,7 +122,7 @@ function loadBridges() {
         // Load up the class for this accessory
         var bridgeName = bridgeConfig["platform"]; // like "Wink"
         var bridgeModule = require('./platforms/' + bridgeName + ".js"); // like "./platforms/Wink.js"
-        var bridgeConstructor = bridgeModule.bridge; // like "WinkPlatform", a JavaScript constructor
+        var bridgeConstructor = bridgeModule.platform; // like "WinkPlatform", a JavaScript constructor
 
         // Create a custom logging function that prepends the platform display name for debugging
         var name = bridgeConfig["name"];
